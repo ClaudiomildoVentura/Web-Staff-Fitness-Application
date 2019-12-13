@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import api from '../Settings/api/api'
 
 export const getExercisesList = async () => {
@@ -10,7 +9,6 @@ export const getExercisesList = async () => {
         return error.message
     }
 }
-
 
 export const getCategoryList = async () => {
     try {

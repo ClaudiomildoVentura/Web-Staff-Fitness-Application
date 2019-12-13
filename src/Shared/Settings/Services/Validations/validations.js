@@ -25,12 +25,13 @@ export function validarcpf(e) {
 export function validarNumeroTel(e) {
     e.preventDefault()
     const campo = e.target
-    if (campo.value.length === 8 ||campo.value.length === 9) {
+    if (campo.value.length === 8 || campo.value.length === 9) {
         return { valido: true, erro: '', valor: campo.value }
     } else {
         return { valido: false, erro: 'Insira um número de CPF válido, apenas os números.', valor: '' }
     }
 }
+
 export function validarAreaCode(e) {
     e.preventDefault()
     const campo = e.target
@@ -77,9 +78,5 @@ export default class validacoes extends React.Component {
     constructor(props) {
         super(props)
         this.state = this.props.state
-    }
-
-    return() {
-        //        {this.state.campo.id='nome'}
     }
 }
