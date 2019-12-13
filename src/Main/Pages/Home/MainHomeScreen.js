@@ -21,12 +21,12 @@ export default class MainHomeScreen extends Component {
       this.setState({ error: "Preencha e-mail e senha para continuar!" });
     } else {
       try {
-        const response = await api.post("login", { email: this.state.email, password: this.state.password });
+        const response = await api.post("login", { email: this.state.email, password: this.state.password })
         if (response.data.status === 0) {
           if (response.data.nivelAcesso === 2) {
             this.setState({ error: "" });
-            this.setState({ sucesso: response.data.message });
-            login(response.data.accessToken.token);
+            this.setState({ sucesso: response.data.message })
+            login(response.data.accessToken.token)
             setId(response.data.userId);
             this.props.history.push('staff/dashboard')
           }
@@ -57,7 +57,7 @@ export default class MainHomeScreen extends Component {
             </Form.Group>
             <Form.Group controlId="formBasicPassword">
               <Form.Label style={MainHomeStyles.txt}>Senha</Form.Label>
-              <Form.Control type="password" onChange={e => this.setState({ password: e.target.value })} placeholder="Insira sua senha" autocomplete="off"/>
+              <Form.Control type="password" onChange={e => this.setState({ password: e.target.value })} placeholder="Insira sua senha" autocomplete="off" />
             </Form.Group>
             <div style={MainHomeStyles.viewBtn}>
               <Button className="btn" variant="secondary" type="submit">Fazer Login</Button>
