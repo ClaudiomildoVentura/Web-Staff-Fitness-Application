@@ -1,0 +1,15 @@
+{
+  "short_name": "Staff Fitness",
+  "name": "Staff Fitness",
+  "icons": [
+    {
+      "src": "logoStaff-alt.png",
+      "sizes": "512 x 512 256x256 128x128 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#38CEFA",
+  "background_color": "#ffffff"
+}

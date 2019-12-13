@@ -1,0 +1,110 @@
+.menu-area {
+    background-color: var(--bg-dark);
+    position: fixed; 
+    height: 100vh;
+    box-shadow: 
+        2px 0 10px 0 rgba(0, 0, 0, 0.12),
+        2px 0 15px 0 rgba(0, 0, 0, 0.09);
+}
+
+.fa-male{
+    width:20px !important
+}
+.menu-area .accordion .card {
+    background: transparent;
+    color: white;
+}
+
+.accordion > .card:first-of-type, .accordion > .card:last-of-type  {
+    border-radius: 0px
+}
+p.menuTitle {
+    margin-bottom: 0 !important
+}
+.menuTitle {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 15px;
+    background: rgb(44,59,65);
+}
+.menuTitle i {
+    padding-right: 5px;
+    opacity: 0.6;
+}
+
+.card-header:hover .seta{
+    transform: rotate(-90deg);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.6;
+    -webkit-transition-duration: 0.5s;
+       -moz-transition-duration: 0.5s;
+         -o-transition-duration: 0.5s;
+            transition-duration: 0.5s;           
+}
+.fa, .svg-inline--fa{
+    padding-right: 5px;
+    font-size: 20px
+}
+.card-header .seta{
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg);
+    color: white;
+    opacity: 0.6;
+}
+
+.card-header{
+    padding: 1rem 1rem;
+    background: rgb(44,59,65)    
+}
+
+.menu .card-header a {
+    padding: 0.5rem 1rem
+}
+
+a.nav-link{
+    padding: 0px !important;
+}
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    padding: 0.5rem 1rem
+/*    padding: 15px;*/
+}
+.menu a:hover {
+/*    background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%); */
+background: rgb(44,59,65)
+}
+
+.menu-area .nav-link {
+    display: block
+}
+@media(max-width: 576px){
+    .menu-area{
+        height: 100%;
+        position: relative;
+    }
+}
+
+@media(max-width: 768px) {    
+    .menu {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .menu a {
+        display: inline;
+        padding: 10px;
+        margin: 0px;
+    }
+
+    .menu {
+        height: 100%;
+        justify-content: space-around;
+    }
+}
