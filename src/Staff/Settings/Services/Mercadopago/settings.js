@@ -30,17 +30,6 @@ buyer.payment.create({
     }
   }
 }).then(function (mpResponse) {
-  console.log(mpResponse);
 }).catch(function (mpError) {
-  console.log(mpError);
-});
-/*buyer.preferences.create(preference)
-.then(function(response){
-// Este valor substituirá a string "$$init_point$$" no seu HTML
-  global.init_point = response.body.init_point;
-}).catch(function(error){
-  console.log(error);
-});*/
-
+})
 export default buyer
-//export default mercadopago
