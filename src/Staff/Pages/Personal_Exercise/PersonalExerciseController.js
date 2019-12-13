@@ -1,4 +1,3 @@
-import React, { Component } from 'react'
 import api from '../../../Shared/Settings/api/api'
 
 const PersonalExercisesController = async () => {
@@ -24,7 +23,6 @@ export const getExercisesList = async () => {
     }
 }
 
-
 export const getCategoryList = async () => {
     try {
         const response = await api.get('/staff/lista/categorias')
@@ -33,6 +31,4 @@ export const getCategoryList = async () => {
         console.log(error)
     }
 }
-
-
 export default PersonalExercisesController

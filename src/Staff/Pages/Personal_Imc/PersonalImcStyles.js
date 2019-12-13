@@ -21,21 +21,6 @@ let PersonalImcStyles = ({
         fontWeight: 'bold',
         marginLeft: 5
     },
-
-    txtInput: {
-       /*  display: 'block',
-        width: '100%',
-        height: 'calc1.5em + 0.75rem + 2px',
-        padding: '0.375rem 0.75rem',
-        fontSize: '1rem',
-        fontWeight: 400,
-        lineHeight: 1.5,
-        color: '#495057',
-        backgroundColor: '#fff',
-        backgroundClip: 'padding-box',
-        border: '1px solid #ced4da',
-        borderRadius: '0.25rem'  */
-      },
     txt: {
         fontSize: 25,
         fontWeight: 'bold'

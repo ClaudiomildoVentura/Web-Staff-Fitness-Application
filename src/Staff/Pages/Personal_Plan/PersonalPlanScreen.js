@@ -18,29 +18,29 @@ export default class PersonalPlanScreen extends Component {
 
   goShopping = async e => {
     e.preventDefault();
-    const {id,value} = e.target
+    const { id, value } = e.target
     console.log(e.target.id)
-    if(id==='gratuito'){
+    if (id === 'gratuito') {
       this.props.history.push({
         pathname: '/compras',
-        state: {items: {id: value, description: 'gratuito', amount: 0}}
+        state: { items: { id: value, description: 'gratuito', amount: 0 } }
       })
-    }else if(id==='lite'){
+    } else if (id === 'lite') {
       this.props.history.push({
         pathname: '/compras',
-        state: {items: {id: value, description: 'lite', amount: 13.99}}
+        state: { items: { id: value, description: 'lite', amount: 13.99 } }
       })
-    }else if(id==='standart'){
+    } else if (id === 'standart') {
       this.props.history.push({
         pathname: '/compras',
-        state: {items: {id: value, description: 'standart', amount: 33.99}}
+        state: { items: { id: value, description: 'standart', amount: 33.99 } }
       })
-    }else if(id==='premium'){
+    } else if (id === 'premium') {
       this.props.history.push({
         pathname: '/compras',
-        state: {items: {id: value, description: 'premium', amount: 48.99}}
+        state: { items: { id: value, description: 'premium', amount: 48.99 } }
       })
-    }    
+    }
   }
 
   render() {
@@ -62,7 +62,7 @@ export default class PersonalPlanScreen extends Component {
                   <ListGroupItem style={PersonalPlanStyles.txtValue}>Gratuito por 30 dias</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                   <Button value={1} variant="secondary" size="sm" block id="gratuito" onClick={e=>this.goShopping(e)}>Contratar agora</Button>
+                  <Button value={1} variant="secondary" size="sm" block id="gratuito" onClick={e => this.goShopping(e)}>Contratar agora</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -81,7 +81,7 @@ export default class PersonalPlanScreen extends Component {
                   <ListGroupItem style={PersonalPlanStyles.txtValue}>R$ 14,99</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                <Button value={2} variant="secondary" size="sm" block id="lite" onClick={e=>this.goShopping(e)}>Contratar agora</Button>
+                  <Button value={2} variant="secondary" size="sm" block id="lite" onClick={e => this.goShopping(e)}>Contratar agora</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -100,7 +100,7 @@ export default class PersonalPlanScreen extends Component {
                   <ListGroupItem style={PersonalPlanStyles.txtValue}>R$ 34,99</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                <Button value={3} variant="secondary" size="sm" block id="standart" onClick={e=>this.goShopping(e)}>Contratar agora</Button>
+                  <Button value={3} variant="secondary" size="sm" block id="standart" onClick={e => this.goShopping(e)}>Contratar agora</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -119,7 +119,7 @@ export default class PersonalPlanScreen extends Component {
                   <ListGroupItem style={PersonalPlanStyles.txtValue}>R$ 49,99</ListGroupItem>
                 </ListGroup>
                 <Card.Body>
-                <Button value={4} variant="secondary" size="sm" block id="premium" onClick={e=>this.goShopping(e)}>Contratar agora</Button>
+                  <Button value={4} variant="secondary" size="sm" block id="premium" onClick={e => this.goShopping(e)}>Contratar agora</Button>
                 </Card.Body>
               </Card>
 

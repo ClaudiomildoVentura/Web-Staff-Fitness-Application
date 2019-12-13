@@ -24,7 +24,7 @@ export default class PersonalProfileScreen extends Component {
     async carregarPerfilPersonal() {
         try {
             console.log(getId())
-            const response = await api.post('staff/perfil', { id: getId() }).catch(erro=>console.log(erro))
+            const response = await api.post('staff/perfil', { id: getId() }).catch(erro => console.log(erro))
             if (response.data.personal) {
                 const personal = response.data.personal
                 this.setState({ 'perfil': personal })

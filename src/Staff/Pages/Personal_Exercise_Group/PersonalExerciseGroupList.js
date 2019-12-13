@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Main from '../../Settings/Template/Main'
-import { Col, Container, Button, Table,  OverlayTrigger, Popover  } from "react-bootstrap"
+import { Col, Container, Button, Table, OverlayTrigger, Popover } from "react-bootstrap"
 import PersonalExerciseGroupStyles from './PersonalExerciseGroupStyles'
 
 const headerProps = {
@@ -14,7 +14,7 @@ export default class PersonalExerciseGroupList extends Component {
         return (
             <Main {...headerProps}>
                 <Container style={PersonalExerciseGroupStyles.containerTbl}>
-                    <Table responsive size="sm"  striped bordered hover style={PersonalExerciseGroupStyles.tbl}>
+                    <Table responsive size="sm" striped bordered hover style={PersonalExerciseGroupStyles.tbl}>
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -35,23 +35,23 @@ export default class PersonalExerciseGroupList extends Component {
                                 <td>06:00</td>
                                 <td>05/01/2020</td>
                                 <Col style={PersonalExerciseGroupStyles.viewBtn}>
-                                <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
 
-                                        <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
                                 </Col>
                             </tr>
 
@@ -63,23 +63,23 @@ export default class PersonalExerciseGroupList extends Component {
                                 <td>06:00</td>
                                 <td>05/01/2020</td>
                                 <Col style={PersonalExerciseGroupStyles.viewBtn}>
-                                <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
 
-                                        <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
                                 </Col>
                             </tr>
 
@@ -91,23 +91,23 @@ export default class PersonalExerciseGroupList extends Component {
                                 <td>18:30</td>
                                 <td>17/09/2019</td>
                                 <Col style={PersonalExerciseGroupStyles.viewBtn}>
-                                <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
 
-                                        <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
                                 </Col>
                             </tr>
 
@@ -119,23 +119,23 @@ export default class PersonalExerciseGroupList extends Component {
                                 <td>18:30</td>
                                 <td>16/09/2019</td>
                                 <Col style={PersonalExerciseGroupStyles.viewBtn}>
-                                <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Editar</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-warning" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-pencil" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
 
-                                        <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
-                                            overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
-                                            <span className="d-inline-block">
-                                                <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
-                                                    <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
-                                                </Button>
-                                            </span>
-                                        </OverlayTrigger>
+                                    <OverlayTrigger placement="top" delay={{ show: 100, hide: 200 }}
+                                        overlay={<Popover style={PersonalExerciseGroupStyles.overlay}>Excluir</Popover>}>
+                                        <span className="d-inline-block">
+                                            <Button variant="outline-danger" size="sm" style={PersonalExerciseGroupStyles.btn}>
+                                                <i className="fa fa-trash" style={PersonalExerciseGroupStyles.i}></i>
+                                            </Button>
+                                        </span>
+                                    </OverlayTrigger>
                                 </Col>
                             </tr>
                         </tbody>

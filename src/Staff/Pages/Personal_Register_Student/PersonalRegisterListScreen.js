@@ -43,7 +43,6 @@ export default class PersonalRegisterListScreen extends Component {
         const studentListTable = this.state.staffStudentsDashboard.map((student, index) => {
             return (
                 <tr>
-                    {console.log(student)}
                     <td>{index + 1}</td>
                     <td>{student.nome}</td>
                     <td>
@@ -93,7 +92,6 @@ export default class PersonalRegisterListScreen extends Component {
 
                         <tbody>
                             {studentListTable}
-                            {console.log(readOnlyInputs)}
                         </tbody>
                     </Table>
                 </Container>

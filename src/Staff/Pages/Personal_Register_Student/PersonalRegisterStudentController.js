@@ -1,16 +1,14 @@
-import React, { Component } from 'react'
 import api from '../../../Shared/Settings/api/api'
 import { getId } from '../../../Shared/Settings/Services/Auth/auth'
-import {staffStudentsDashboard} from '../../../Shared/Controllers/PersonalStudentsController'
+import { staffStudentsDashboard } from '../../../Shared/Controllers/PersonalStudentsController'
 
 let staffStudents = staffStudentsDashboard()
-console.log(staffStudents)
+
 const PersonalRegisterStudentController = async () => {
     try {
-        const response = await api.post('/staff/lista/alunos',{id: getId()})
+        const response = await api.post('/staff/lista/alunos', { id: getId() })
         if (response.data.alunos) {
             const alunos = response.data.alunos
-            console.log(alunos)
             return alunos
         }
     } catch (error) {
@@ -29,7 +27,6 @@ export const getExercisesList = async () => {
     }
 }
 
-
 export const getCategoryList = async () => {
     try {
         const response = await api.get('/staff/lista/categorias')
@@ -38,6 +35,4 @@ export const getCategoryList = async () => {
         console.log(error)
     }
 }
-
-
 export default PersonalRegisterStudentController

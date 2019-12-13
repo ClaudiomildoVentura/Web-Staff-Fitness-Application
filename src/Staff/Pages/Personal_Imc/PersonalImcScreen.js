@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import { Accordion, Button, Card, Col, Container, Row, Form } from "react-bootstrap"
 import PersonalImcStyles from './PersonalImcStyles'
 import Main from '../../Settings/Template/Main'
-import InputMask from 'react-input-mask'
 import PersonalStudentsController from '../../../Shared/Controllers/PersonalStudentsController'
 import { setStudentList, getStudentsList, addStudentList, addStudentQueue } from '../../../Shared/Controllers/PersonalStudentsController'
-import api from '../../../Shared/Settings/api/api'
-import { getId } from '../../../Shared/Settings/Services/Auth/auth'
 import { getIMCsHistory } from './PersonalImcController'
 
 const headerProps = {
@@ -52,42 +49,42 @@ export default class PersonalImcScreen extends Component {
     }
 
     listHistoryData = () => {
-        if(this.state.imcHistoryData.length > 0){
-        listItemsData = this.state.imcHistoryData.map((student, index, date) =>
-            <Card col={12}>
-{index > 0 && console.log(this.state.imcHistoryData[(index -1)].name == student.name)}
-        {console.log(student)}
-{(index == 0 || console.log(this.state.imcHistoryData[(index -1)].name == student.name)) && (        
-                <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey={student.studentId || student.idAlunoIMC}>
-                        {student.studentName || student.name}
-                    </Accordion.Toggle>
-                </Card.Header> )}
-                <Accordion.Collapse eventKey={student.studentId || student.idAlunoIMC}>
-<Card.Body> Peso: {student.peso} - Altura: {student.altura} - Resultado: {(student.imcResults || student.IMC)} - {new Date(student.created_at).getDate() + "/" + new Date(student.created_at).getMonth() + "/" + new Date(student.created_at).getFullYear()}</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-        )
-        }        
+        if (this.state.imcHistoryData.length > 0) {
+            listItemsData = this.state.imcHistoryData.map((student, index, date) =>
+                <Card col={12}>
+                    {index > 0 && console.log(this.state.imcHistoryData[(index - 1)].name == student.name)}
+                    {console.log(student)}
+                    {(index == 0 || console.log(this.state.imcHistoryData[(index - 1)].name == student.name)) && (
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey={student.studentId || student.idAlunoIMC}>
+                                {student.studentName || student.name}
+                            </Accordion.Toggle>
+                        </Card.Header>)}
+                    <Accordion.Collapse eventKey={student.studentId || student.idAlunoIMC}>
+                        <Card.Body> Peso: {student.peso} - Altura: {student.altura} - Resultado: {(student.imcResults || student.IMC)} - {new Date(student.created_at).getDate() + "/" + new Date(student.created_at).getMonth() + "/" + new Date(student.created_at).getFullYear()}</Card.Body>
+                    </Accordion.Collapse>
+                </Card>
+            )
+        }
     }
 
     listHistory = () => {
-        if(this.state.imcHistory.length > 0){
-        listItems = this.state.imcHistory.map((student, index) =>        
-            <Card col={12}>
-        {console.log(student)}
-        {(index == 0 || console.log(this.state.imcHistory[(index -1)].studentName == student.name)) && (        
-                <Card.Header>
-                    <Accordion.Toggle as={Button} variant="link" eventKey={student.studentId || student.idAlunoIMC}>
-                        {student.studentName}
-                    </Accordion.Toggle>
-                </Card.Header> )}
-                <Accordion.Collapse eventKey={student.studentId}>
-        <Card.Body>Peso: {student.studentWeight} - Altura: {student.studentHeight} - Resultado: {(student.imcResults || student.IMC)}</Card.Body>
-                </Accordion.Collapse>
-            </Card>
-        )
-        }        
+        if (this.state.imcHistory.length > 0) {
+            listItems = this.state.imcHistory.map((student, index) =>
+                <Card col={12}>
+                    {console.log(student)}
+                    {(index == 0 || console.log(this.state.imcHistory[(index - 1)].studentName == student.name)) && (
+                        <Card.Header>
+                            <Accordion.Toggle as={Button} variant="link" eventKey={student.studentId || student.idAlunoIMC}>
+                                {student.studentName}
+                            </Accordion.Toggle>
+                        </Card.Header>)}
+                    <Accordion.Collapse eventKey={student.studentId}>
+                        <Card.Body>Peso: {student.studentWeight} - Altura: {student.studentHeight} - Resultado: {(student.imcResults || student.IMC)}</Card.Body>
+                    </Accordion.Collapse>
+                </Card>
+            )
+        }
     }
 
     calcularIMC() {
@@ -101,9 +98,9 @@ export default class PersonalImcScreen extends Component {
             console.log(resultIMC)
             if (resultIMC !== 0) {
                 const date = new Date()
-                this.setState({resultado: resultIMC})
+                this.setState({ resultado: resultIMC })
                 const student = { 'studentId': this.state.currentStudentId, 'studentName': this.state.currentStudentName, 'studentHeight': this.state.height, 'studentWeight': this.state.weight, 'imcResults': resultIMC, 'date': date.toLocaleString() }
-                this.setState(prevState => ({imcHistory: [...prevState.imcHistory, student]}))      
+                this.setState(prevState => ({ imcHistory: [...prevState.imcHistory, student] }))
 
             }
         } else {
@@ -115,8 +112,8 @@ export default class PersonalImcScreen extends Component {
         e.preventDefault()
         this.state.studentsList.map(student => {
             const value = e.target.value
-                this.setState({ currentStudentId: student.idAluno })
-                this.setState({ currentStudentName: student.nome })
+            this.setState({ currentStudentId: student.idAluno })
+            this.setState({ currentStudentName: student.nome })
         })
     }
     massaChange = async e => {
@@ -153,7 +150,7 @@ export default class PersonalImcScreen extends Component {
         return (
             <>
                 <Main {...headerProps}>
-                {console.log(this.state.imcHistory)}
+                    {console.log(this.state.imcHistory)}
                     <Container style={PersonalImcStyles.container}>
                         <Row>
                             <Col sm={7} >
@@ -214,12 +211,12 @@ export default class PersonalImcScreen extends Component {
                                 </Card>
                             </Col>
                         </Row>
-                         <Row className="p-3">
+                        <Row className="p-3">
                             <Accordion col={12} onChange={this.listHistory()}>
                                 {listItems}
                                 {listItemsData}
                             </Accordion>
-        </Row> 
+                        </Row>
                     </Container>
                 </Main>
             </>

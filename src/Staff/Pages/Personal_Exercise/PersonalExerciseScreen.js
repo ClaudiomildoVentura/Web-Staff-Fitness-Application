@@ -151,7 +151,7 @@ export default class PersonalExerciseScreen extends Component {
         })
     }
 
-    ListEquipments = async e => { //esseaquifunciona
+    ListEquipments = async e => {
         e.preventDefault()
         EquipmentsList = []
         EquipmentsList.size = 0
@@ -175,9 +175,6 @@ export default class PersonalExerciseScreen extends Component {
             this.state.equipmentsList.map((equip, index) => {
                 const result = equip.nomeEquipamento.indexOf(equipamento)
                 if (result === -1) {
-                    //                if(index === 0){
-                    //                    EquipmentsList.push(equipamento)
-                    //                }
                     equipamento = equip.nomeEquipamento
                     EquipmentsList.push(<option value={equip.nomeEquipamento}>{equip.nomeEquipamento}</option>)
                     this.setState({ disableEquipment: false })
@@ -234,7 +231,6 @@ export default class PersonalExerciseScreen extends Component {
                 e.target.value = ''
                 this.setState({ errorMessage: errorDateMessage })
             }
-            //        {(mes!=='02' && !mespar && mes>=8 && dia==='31') ? this.setState({erroData: mensagemErro}) : this.setState({dia: e.target.value})}        
         } else {
             this.setDate(e)
         }

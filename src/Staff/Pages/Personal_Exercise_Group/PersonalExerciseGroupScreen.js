@@ -4,7 +4,7 @@ import PersonalExerciseGroupStyles from './PersonalExerciseGroupStyles'
 import Main from '../../Settings/Template/Main'
 import api from '../../../Shared/Settings/api/api'
 import InputMask from 'react-input-mask'
-import PersonalExercisesGroupController, { ExercisesCategory, getExercisesList, getCategoryList } from './PersonalExerciseGroupController'
+import PersonalExercisesGroupController, { getExercisesList, getCategoryList } from './PersonalExerciseGroupController'
 
 const headerProps = {
     icon: 'users',
@@ -80,14 +80,13 @@ export default class PersonalExerciseGroupScrenn extends Component {
         this.listaEquipamentos = this.listaEquipamentos.bind(this)
         this.listaCategorias = this.listaCategorias.bind(this)
         this.listaEquipamentoSelecionado = this.listaEquipamentoSelecionado.bind(this)
-        //this.setarData = this.setarData.bind(this)
         this.validarData = this.validarData.bind(this)
     }
 
     listaEquipamentoSelecionado = async e => {
         e.preventDefault()
         this.setState({ listaEquipamentoSelecionado: [] })
-        this.state.listaEquipamentos.map((equipamento) => {  //   Expected to return a value in arrow function
+        this.state.listaEquipamentos.map((equipamento) => {
             if (equipamento.id === e.target.value) {
                 console.log(equipamento)
                 this.setState({ listaEquipamentoSelecionado: [this.state.listaEquipamentoSelecionado.push(equipamento)] })
@@ -138,9 +137,6 @@ export default class PersonalExerciseGroupScrenn extends Component {
         let dia = this.state.dia //pegando valor dia do state
         let mes = this.state.mes //pegando valor mes do state
         let ano = this.state.ano //pegando valor ano do state
-        /* { id === 'dia' && (dia = value) } //vendo se o campo selecionado foi dia
-        { id === 'mes' && (mes = value) } //vendo se o campo selecionado foi mes *** Corrigir Nested block is redundant ***
-        { id === 'ano' && (ano = value) } */ //vendo se o campo selecionado foi ano
         const bissexto = (ano !== '' ? (mes % 400 === 0) ? true : ((mes % 4 === 0) ? true : (mes % 100 !== 0 ? true : false)) : false)
         const mespar = (mes % 2 === 0 ? true : false)
         if (mes) {
@@ -159,7 +155,6 @@ export default class PersonalExerciseGroupScrenn extends Component {
                 this.setState({ erroData: mensagemErro })
                 this.setarData(e)
             }
-            //        {(mes!=='02' && !mespar && mes>=8 && dia==='31') ? this.setState({erroData: mensagemErro}) : this.setState({dia: e.target.value})}        
         } else {
             this.setarData(e)
         }
@@ -167,13 +162,11 @@ export default class PersonalExerciseGroupScrenn extends Component {
 
     ListNamesExerciseEquipmentSelected = async e => {
         e.preventDefault()
-        console.log(e.target.value)
         if (e.target.value) {
             const value = e.target.value
             ListNamesExerciseEquipmentSelected = []
             this.state.ExercisesList.map(exercise => {
                 const result = exercise.nomeEquipamento.indexOf(value)
-                console.log(result)
                 if (result !== -1) {
                     ListNamesExerciseEquipmentSelected.push(<option value={exercise.nomeExercicio}>{exercise.nomeExercicio}</option>)
                     this.setState({ disableEquipmentName: false })
@@ -203,10 +196,8 @@ export default class PersonalExerciseGroupScrenn extends Component {
                     listEquipamentos.push(<option></option>)
                 }
                 const result = equip.nomeEquipamento.indexOf(equipamento)
-                console.log(result)
                 if (result === -1) {
                     equipamento = equip.nomeEquipamento
-                    console.log(equipamento)
                     listEquipamentos.push(<option value={equip.nomeEquipamento}>{equip.nomeEquipamento}</option>)
                     this.setState({ disableEquipment: false })
                 }
